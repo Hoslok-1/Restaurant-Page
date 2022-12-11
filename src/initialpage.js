@@ -1,5 +1,9 @@
 const content = document.createElement('div')
-const container = document.createElement('div')
+export const container = document.createElement('div')
+export const home = document.createElement('div')
+export const menu = document.createElement('div')
+export const aboutUs = document.createElement('div')
+
 
 const generateContent = () =>{
     content.setAttribute('id','content')
@@ -9,10 +13,6 @@ const generateContent = () =>{
 
 const navBar = () =>{
     const navBar = document.createElement('div')
-    const home = document.createElement('div')
-    const menu = document.createElement('div')
-    const aboutUs = document.createElement('div')
-
     content.appendChild(container)
     container.appendChild(navBar)
     container.classList.add('container')
