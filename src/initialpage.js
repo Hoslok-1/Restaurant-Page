@@ -1,23 +1,22 @@
-const content = document.createElement('div')
+export const content = document.createElement('div')
 export const container = document.createElement('div')
-export const home = document.createElement('div')
 export const menu = document.createElement('div')
+export const home = document.createElement('div')
 export const aboutUs = document.createElement('div')
-
 
 const generateContent = () =>{
     content.setAttribute('id','content')
-
+    
     document.body.appendChild(content)
+    content.appendChild(container)
+    container.classList.add('container')
 }
 
 const navBar = () =>{
+    
     const navBar = document.createElement('div')
-    content.appendChild(container)
     container.appendChild(navBar)
-    container.classList.add('container')
     navBar.classList.add('navBar')
-    container.classList.add('container')
 
     home.setAttribute('id','home')
     menu.setAttribute('id','menu')

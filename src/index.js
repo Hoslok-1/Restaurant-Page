@@ -1,29 +1,35 @@
-import { generateContent,navBar,textInitial,footer,menu,container,home } from './initialpage'
-import { container1, generateMenu,navBar as navBarMenu } from './menupage';
+import { generateContent,navBar,textInitial,footer,container,home,menu } from './initialpage'
+import { container1, generateMenu,navBar as navBarMenu,home as homeMenu, featuredItems,belowMenuItems } from './menupage';
 import './style.css';
+
+
 
 generateContent();
 navBar();
 textInitial();
 footer();
-generateMenu();
+
 
 function closeTab()
 {
-    container.style.display = 'none'
-    container1.style.display = 'none'
+    container.remove()
+    container1.remove()
 }
 
-function openHome()
+function loadHome()
 {
-    container.style.display = 'block'
+    generateContent();
 }
 
-function openMenu()
+function loadMenu()
 {
-    container.style.display = 'block'
-    console.log("This work?")
+    generateMenu();
+    navBarMenu();
+    featuredItems();
+    belowMenuItems();
 }
 
-menu.addEventListener('click', ()=>{closeTab();openMenu();})
-home.addEventListener('click', () =>{closeTab();openHome();})
+
+homeMenu.addEventListener('click',()=>{closeTab();loadHome()})
+home.addEventListener('click',()=>{closeTab();loadHome()})
+menu.addEventListener('click',()=>{closeTab();loadMenu()})
