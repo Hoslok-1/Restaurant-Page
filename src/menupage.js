@@ -1,4 +1,3 @@
-import { content } from "./initialpage"
 import Icon from './icon.jpg';
 import Icon2 from './icon2.jpg';
 import Icon3 from './icon3.jpg';
@@ -11,6 +10,8 @@ myIcon2.src = Icon2
 
 const myIcon3 = new Image()
 myIcon3.src = Icon3
+export const content = document.createElement('div')
+
 
 export const container1 = document.createElement('div')
 export const home = document.createElement('div')
@@ -19,6 +20,8 @@ const menu = document.createElement('div')
 const menuItems = document.createElement('div')
 
 const generateMenu= () =>{
+    content.setAttribute('id','content')
+    document.body.appendChild(content)
     content.appendChild(container1)
     document.body.appendChild(content)
     content.appendChild(container1)
@@ -81,6 +84,7 @@ const featuredItems = () =>{
 
     item3.appendChild(myIcon3)
     myIcon3.classList.add('img3')
+
 }
 
 const belowMenuItems = () =>{
@@ -176,4 +180,18 @@ const belowMenuItems = () =>{
     dessertItemThree.textContent = "3.consectetur adipiscing elit"
 }
 
-export {generateMenu,navBar,featuredItems,belowMenuItems}
+const footer = () =>{
+    const footerInitial = document.createElement('div')
+    const footerText = document.createElement('div')
+
+    footerInitial.classList.add('footer')
+    footerText.classList.add('footerText')
+
+
+    footerText.textContent = "Made by Hoslok-1"
+
+    container1.appendChild(footerInitial)
+    footerInitial.appendChild(footerText)
+}
+
+export {generateMenu,navBar,featuredItems,belowMenuItems,footer}

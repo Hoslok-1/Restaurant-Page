@@ -8,7 +8,7 @@ module.exports = {
     },
     devtool:'inline-source-map',
     output:{
-      clean:true,
+      
     },
     module: {
         rules: [

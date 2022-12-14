@@ -81,11 +81,9 @@ body
 
 .menuItemsOne
 {
-    display: flex;
-    padding-left: 1%;
-    padding-top: 1%;
-    column-gap: 10px;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 
@@ -126,4 +124,46 @@ body
 .item
 {
     margin-left: 10px;
+}
+
+#home
+{
+    cursor: pointer;
+}
+
+#menu
+{
+    cursor: pointer;
+}
+
+#aboutUs
+{
+    cursor: pointer;
+}
+
+.aboutUsText
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 30px;
+    column-gap: 20px;
+}
+
+.textLeft
+{
+    text-align: center;
+}
+
+#img4
+{
+    border-radius: 20%;
+    margin-left: 10%;
+}
+
+.headingAboutUs
+{
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 50px;
+    margin-left: 30px;
 }
